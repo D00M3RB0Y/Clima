@@ -38,15 +38,15 @@
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
             </form>
           </div>
         </div>
       </nav>
 
       <div class="container">
-        <h1 class="my-4 text-center">Clima de Mexico City</h1>
+        <h1 class="my-4 text-center">Clima de <span id="cityName"></span></h1>
         <main>
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
               <div class="col">
@@ -55,7 +55,7 @@
                     <h4 class="my-0 fw-normal">Temperaturas</h4>
                   </div>
                   <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+                    <h1 class="card-title pricing-card-title"><span id="temp2"></span><small class="text-muted fw-light"><span>&#8451</span></small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
                       <li>Temperatura: <span id="temp"></span></li>
                       <li>Minima: <span id="min_temp"></span></li>
@@ -68,12 +68,12 @@
               <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm">
                   <div class="card-header py-3">
-                    <h4 class="my-0 fw-normal">Pro</h4>
+                    <h4 class="my-0 fw-normal">Informacion de Humedad</h4>
                   </div>
                   <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+                    <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small class="text-muted fw-light"> %</small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li>Cloud PCT: <span id="cloud_pct"></span></li>
+                        <li>Wind Degree: <span id="wind_degrees"></span></li>
                         <li>Feels like: <span id="feels_like"></span></li>
                         <li>Humedad: <span id="humidity"></span></li>
                     </ul>
@@ -84,13 +84,12 @@
               <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm border-primary">
                   <div class="card-header py-3 text-bg-primary border-primary">
-                    <h4 class="my-0 fw-normal">Enterprise</h4>
+                    <h4 class="my-0 fw-normal">Informacion Viento</h4>
                   </div>
                   <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+                    <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span><small class="text-muted fw-light"> km/hr</small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>Wind Speed: <span id="wind_speed"></span></li>
-                        <li>Wind Degree: <span id="wind_degrees"></span></li>
                         <li>Sunrise Time: <span id="sunrise"></span></li>
                         <li>Sunset Time: <span id="sunset"></span></li>
                     </ul>
